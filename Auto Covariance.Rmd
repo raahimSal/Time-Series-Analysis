@@ -1,0 +1,41 @@
+---
+title: "The Autocorrelation Function"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Creating a purely random time series with a normal distribution 
+- with the use of the rnorm() routine
+
+```{r}
+purely_random_process=ts(rnorm(100)) # 100 data points from std normal distribution that is a ts objecct
+(acf(purely_random_process, type='covariance'))
+```
+
+- We assume weak stattionarity
+  - No systematic change in mean or variation
+  - No periodic fluctuations
+  
+The acf() routine plots autocorrelation cofficients at differnt lags: correlogram
+since it starts at 1 r0 = c0/c0 = 1
+
+The resulting plot is the autocorrelation cofficients at different lags. 
+
+```{r}
+( acf(purely_random_process, main='Correlogram of a Purely Random Porcess') )
+```
+
+R0 always starts at 1 and then we see that, then we see there isnt much correlation between the other lags, and based on our selection of a normal distribution and therefore we dont expect any correlation between the lags. 
+
+The dashed lines show the significance leves and none of the lag spikes crossing the dashed lines indiciate that there isnt any correlation between our lags. 
+
+
+
+
+
+
+
