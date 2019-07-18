@@ -19,11 +19,11 @@ purely_random_process=ts(rnorm(100)) # 100 data points from std normal distribut
     ## Autocovariances of series 'purely_random_process', by lag
     ## 
     ##        0        1        2        3        4        5        6        7 
-    ##  1.25203 -0.05569  0.00971 -0.04905 -0.09615 -0.17681 -0.13055  0.04853 
+    ##  0.98692  0.03322 -0.05615 -0.09353 -0.05729 -0.00305  0.07398 -0.01353 
     ##        8        9       10       11       12       13       14       15 
-    ## -0.13545  0.16821 -0.04747  0.05116  0.08786  0.19378 -0.07379 -0.12909 
+    ## -0.00674  0.02048  0.10801  0.06150 -0.12378 -0.17878  0.06097  0.07885 
     ##       16       17       18       19       20 
-    ##  0.04592 -0.18213 -0.01459 -0.01695  0.08482
+    ##  0.14879  0.00156  0.01401 -0.14123 -0.06745
 
   - We assume weak stattionarity
       - No systematic change in mean or variation
@@ -45,11 +45,11 @@ lags.
     ## Autocorrelations of series 'purely_random_process', by lag
     ## 
     ##      0      1      2      3      4      5      6      7      8      9 
-    ##  1.000 -0.044  0.008 -0.039 -0.077 -0.141 -0.104  0.039 -0.108  0.134 
+    ##  1.000  0.034 -0.057 -0.095 -0.058 -0.003  0.075 -0.014 -0.007  0.021 
     ##     10     11     12     13     14     15     16     17     18     19 
-    ## -0.038  0.041  0.070  0.155 -0.059 -0.103  0.037 -0.145 -0.012 -0.014 
+    ##  0.109  0.062 -0.125 -0.181  0.062  0.080  0.151  0.002  0.014 -0.143 
     ##     20 
-    ##  0.068
+    ## -0.068
 
 R0 always starts at 1 and then we see that, then we see there isnt much
 correlation between the other lags, and based on our selection of a
